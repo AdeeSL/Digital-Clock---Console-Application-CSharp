@@ -10,7 +10,7 @@ namespace Clock
         public int seconds;
         public string countryName; 
         public int tempMin; 
-        public int tempHou; 
+        public int tempHour; 
 
         public Clock(string countryName , double time)
         {
@@ -47,7 +47,7 @@ namespace Clock
         public void printClock()
         {
             this.tick();
-            Console.WriteLine("  {0,-30}   {1:D2}:{2:D2}:{3:D2}",this.countryName,this.hours,this.minutes,this.seconds);
+            Console.WriteLine("  {0}   {1:D2}:{2:D2}:{3:D2}",this.countryName,this.hours,this.minutes,this.seconds);
 
         }
 
@@ -100,22 +100,17 @@ namespace Clock
         {
             Clock SL = new Clock("Sri Lanka, Sri Jayawardenepura", +05.30);
             Clock CH = new Clock("China", +08.00);
-            Clock AL = new Clock("United States, Alaska", -09.00);
-            Clock LA = new Clock("United States, Los Angeles", -07.00);
-            Clock NZ = new Clock("New Zealand, Chatham Islands", +12.45);
+           
             //can add more
 
-            for(;;)
+            while(true)
             {
                 Console.Clear();
 
-                Console.WriteLine("  {0,-30}   {1}", "Country", "Time\n");
+                Console.WriteLine("  {0}   {1}", "Country", "Time\n");
 
                 CH.printClock();
-                NZ.printClock();
                 SL.printClock();
-                AL.printClock();
-                LA.printClock();
 
                 System.Threading.Thread.Sleep(1000);
             }
