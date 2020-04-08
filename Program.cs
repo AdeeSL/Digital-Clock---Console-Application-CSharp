@@ -98,9 +98,8 @@ namespace Clock
     {
         static void Main(string[] args)
         {
-            Clock SL = new Clock("Sri Lanka, Sri Jayawardenepura", +05.30);
-            Clock CH = new Clock("China", +08.00);
-           
+            Clock sl = new Clock("Sri Lanka, Sri Jayawardenepura", +05.30);
+            Clock ch = new Clock("China", +08.00);
             //can add more
 
             while(true)
@@ -109,8 +108,8 @@ namespace Clock
 
                 Console.WriteLine("  {0}   {1}", "Country", "Time\n");
 
-                CH.printClock();
-                SL.printClock();
+                ch.printClock();
+                sl.printClock();
 
                 System.Threading.Thread.Sleep(1000);
             }
